@@ -155,16 +155,67 @@
 			lista_campanhas();
 
 			// //enviando ID da campanha
-			// $(document).on('click', '.img-campanha', function(){     
-		 //        // store some data
-		 //        if(typeof(Storage)!=="undefined") {
-		 //              localStorage.id_campanha  = $(this).attr("idcampanha");   
-		 //              localStorage.img_campanha = $(this).children().attr("src");
-		 //        }
-		 //        // Change page
-		 //        $.mobile.changePage("#prod-camp-page");
-		    // });			
+			$(document).on('click', '.img-campanha', function(){     
+		        // store some data
+		        if(typeof(Storage)!=="undefined") {
+		              localStorage.id_campanha  = $(this).attr("idcampanha");   
+		              localStorage.img_campanha = $(this).children().attr("src");
+		        }
+		        // Change page
+		        $.mobile.changePage("#prod-camp-page");
+		    });			
     	});
+
+
+    	//carrega a página de pesquisa
+    	$(document).on('pagebeforeshow', '#search-page', function(){       
+		     $("#search-basic").focus();
+		});
+
+
+		//carrega a página que lista os produtos de uma campanha
+    	$(document).on('pagebeforeshow', '#prod-camp-page', function(){       
+		    // alert( localStorage.id_campanha ); 
+		    // alert( localStorage.img_campanha );
+
+		    $("#img-campanha").html("<img src='"+localStorage.img_campanha+"' />");
+		    
+		    lista_produtos_campanha(localStorage.id_campanha);
+
+		    $(document).on('click', '#tbody-prod-camp tr td', function(){ 
+		    	if( $(this).attr("qtd-prod") == 0 )
+		    	{
+
+		    	}else
+		    	{
+					if(typeof(Storage)!=="undefined") {
+			              localStorage.id_produto  = $(this).attr("id-produto");   
+			        }
+			        // Change page
+			        $.mobile.changePage("#prod-page");
+		    	}
+		    });
+		});
+
+
+		$(document).on('pagebeforeshow', '#prod-page', function(){    
+			lista_produto(localStorage.id_produto);
+
+			$(document).ready(function () {
+			    //initialize swiper when document ready  
+			    var mySwiper = new Swiper ('.swiper-container', {
+			      // Optional parameters
+			      	pagination: '.swiper-pagination',
+			        paginationClickable: true
+			    })        
+			  });			
+		});	
+
+		$(document).on('pageshow','#prod-page' , function(){
+							
+		});
+
+
         </script>        
     </body>
 </html>
