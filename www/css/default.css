@@ -1,0 +1,61 @@
+body{
+	margin:0;
+	padding:0;
+	background-color:#ccc;
+}
+
+img{
+	width  : 100%;
+    height : auto;
+    margin: 0;
+    padding: 0;
+}
+
+.ui-input-search
+{
+    /*float:right;*/
+}
+
+/*SLIDER DOS PRODUTOS*/
+	.swiper-container {
+	    width: 100%;
+	    height: auto;
+	} 
+
+
+/*TBODY PROD CAMP*/
+	#tbody-prod-camp #img{
+		position: relative;
+	}
+
+	#tbody-prod-camp #desconto{	  
+		position: absolute;
+		right: 0;
+		width: 40%;
+	}
+
+	#tbody-prod-camp #valor-desconto{
+		text-align: center;
+		/*font-weight: bold;*/
+	}
+
+	#tbody-prod-camp #marca, #produto, #preco_antigo, #preco_atual{
+		text-align: center;
+	}
+
+	#tbody-prod-camp #marca{
+		font-weight: bold;
+	}
+
+	#tbody-prod-camp #marca #produto , #preco_atual{
+		/*font-weight: bold;*/
+	}
+
+	#tbody-prod-camp #produto, #preco_antigo{
+		color: gray;
+	}
+
+	#tbody-prod-camp #preco_antigo{
+		/*text-decoration: line-through;*/
+	}
+

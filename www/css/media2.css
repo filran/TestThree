@@ -1,0 +1,108 @@
+@media screen and (max-width:320px) and (orientation: portrait ) {
+	#tbody-prod-camp #desconto{
+	    	background-color: green;
+	    	height: 18%;
+	    	-moz-border-radius:8px;
+			-webkit-border-radius:8px;
+			 border-radius:8px;
+	    }
+
+	    #tbody-prod-camp #valor-desconto{
+	    	font-size: 16px;
+	    	margin-top: 5%;
+	    }
+
+	    #tbody-prod-camp #marca, #produto, #preco_antigo, #preco_atual{
+	    	margin-bottom: -8px;
+	    }
+
+	    #tbody-prod-camp #marca{
+			font-size: 14px;
+	    }
+
+	    #tbody-prod-camp #produto, #preco_antigo, #preco_atual{
+	    	font-size: 12px;
+	    }
+
+	    #tbody-prod-camp #preco_antigo{
+	    	text-decoration: line-through;
+	    }
+
+	    #tbody-prod-camp #preco_atual{
+	    	font-weight: bold;
+	    }
+	}
+@media screen and (max-width:320px) and (orientation: landscape ) {
+	#tbody-prod-camp #desconto{
+	    	background-color: green;
+	    	height: 18%;
+	    	-moz-border-radius:8px;
+			-webkit-border-radius:8px;
+			 border-radius:8px;
+	    }
+
+	    #tbody-prod-camp #valor-desconto{
+	    	font-size: 16px;
+	    	margin-top: 5%;
+	    }
+
+	    #tbody-prod-camp #marca, #produto, #preco_antigo, #preco_atual{
+	    	margin-bottom: -8px;
+	    }
+
+	    #tbody-prod-camp #marca{
+			font-size: 14px;
+	    }
+
+	    #tbody-prod-camp #produto, #preco_antigo, #preco_atual{
+	    	font-size: 12px;
+	    }
+
+	    #tbody-prod-camp #preco_antigo{
+	    	text-decoration: line-through;
+	    }
+
+	    #tbody-prod-camp #preco_atual{
+	    	font-weight: bold;
+	    }
+	}
+
+}
+@media screen and (min-width:480px) {
+	#tbody-prod-camp #desconto{
+	    	background-color: blue;
+	    	height: 18%;
+	    	-moz-border-radius:8px;
+			-webkit-border-radius:8px;
+			 border-radius:8px;
+	    }
+
+	    #tbody-prod-camp #valor-desconto{
+	    	font-size: 16px;
+	    	margin-top: 5%;
+	    }
+
+	    #tbody-prod-camp #marca, #produto, #preco_antigo, #preco_atual{
+	    	margin-bottom: -8px;
+	    }
+
+	    #tbody-prod-camp #marca{
+			font-size: 14px;
+	    }
+
+	    #tbody-prod-camp #produto, #preco_antigo, #preco_atual{
+	    	font-size: 12px;
+	    }
+
+	    #tbody-prod-camp #preco_antigo{
+	    	text-decoration: line-through;
+	    }
+
+	    #tbody-prod-camp #preco_atual{
+	    	font-weight: bold;
+	    }
+	}	
+}
+@media screen and (min-width:600px) {}
+@media screen and (min-width:768px) {}
+@media screen and (min-width:992px) {}

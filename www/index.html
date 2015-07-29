@@ -56,6 +56,73 @@
 			</div>			
 		</div>	
 
+		<!--PAGE = SEARCH-->
+		<div data-role="page" id="search-page" data-title="Pesquisar" data-position="fixed" data-theme="a">		
+			<div data-role="header" id="search-header" data-position="fixed" data-theme="b">
+				<input type="search" data-theme="a" name="search" data-mini="true" data-inline="true" id="search-basic" value="" autofocus />
+			</div>			
+
+			<div data-role="main" id="search-main" class="ui-content">
+				Search
+			</div>
+		</div>	
+
+
+
+		<!--PAGE = PRODUTOS DA CAMPANHA-->
+		<div data-role="page" id="prod-camp-page" data-title="Produtos" data-position="fixed" data-theme="a">		
+			<div data-role="header" id="prod-camp-header" data-position="fixed" data-theme="b"></div>			
+			<div data-role="main" id="prod-camp-main" class="ui-content">
+				<div id="img-campanha"></div>
+				<table data-role="table" id="prod-camp-table" data-mode="" class="ui-responsive movie-list">
+				  <thead>
+					<tr>
+					  <th></th>
+					  <th></th>
+					</tr>
+				  </thead>
+				  <tbody id="tbody-prod-camp">
+				  	<!-- <tr>
+				  		<td>
+				  			<div id="img">
+				  				<div id="desconto"><div id="valor-desconto">-6%</div></div>
+				  				<img src="http://localhost/nusoap/img/camisa.jpg" />
+			  				</div>
+				  			<div id="marca">QuikSilver</div>
+				  			<div id="produto">Camiseta Quiksilver</div>
+				  			<div id="preco_antigo">R$ 89,90</div>
+				  			<div id="preco_atual">R$ 79,90</div>
+			  			</td>
+				  	</tr> -->
+				  </tbody>
+				</table>
+			</div>
+		</div>	
+
+
+		<!--PAGE = DETALHES DO PRODUTO-->
+		<div data-role="page" id="prod-page" data-title="Produto" data-position="fixed" data-theme="a">		
+			<div data-role="header" id="prod-header" data-position="fixed" data-theme="b"></div>			
+			<div data-role="main" id="prod-main" class="ui-content">
+				<div id="imgs-prod">
+					<div class="swiper-container">
+					  <div class="swiper-wrapper">
+					      <!-- <div class="swiper-slide"><img src="http://localhost/nusoap/img/camisa2.jpg"></div>
+					      <div class="swiper-slide"><img src="http://localhost/nusoap/img/camisa2.jpg"></div>
+					      <div class="swiper-slide"><img src="http://localhost/nusoap/img/camisa2.jpg"></div> -->
+					  </div>
+				      <div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<div id="nome-prod">Marca - Nome do produto</div>
+				<div id="preco-prod"><span id="preco">R$ 89,90</span><span id="parcelamento"> até 2x de 45,90</span></div>
+				<p>Detalhes do produto</p>
+				<div id="detalhes">Aqui vem os detalhes do produto aberto.</div>
+			</div>
+		</div>
+
+
+
 		<!--SCRIPTS-->		
 		<!--JQuery-->	
 		<script type="text/javascript" charset="utf-8" src="jquery/jquery-2.1.4.js"></script>
@@ -66,6 +133,14 @@
 		<!-- Do APP -->
 		<script type="text/javascript" charset="utf-8" src="js/config.js"></script>
 		<script type="text/javascript" charset="utf-8" src="js/functions.js"></script>
+
+			<!--  -->
+			<script type="text/javascript" charset="utf-8" src="js/plugins/Swiper-master/dist/js/swiper.jquery.min.js"></script>
+			<link href="js/plugins/Swiper-master/dist/css/swiper.min.css" rel="stylesheet">
+
+		<link href="css/default.css" rel="stylesheet">
+		<link href="css/media.css" rel="stylesheet">
+
 				
 		<!--PhoneGap-->
         <script src="phonegap.js"></script>
@@ -77,7 +152,18 @@
 
         //carrega a página principal
     	$(document).on("pagecreate","#main-page",function(){			
-			
+			lista_campanhas();
+
+			// //enviando ID da campanha
+			// $(document).on('click', '.img-campanha', function(){     
+		 //        // store some data
+		 //        if(typeof(Storage)!=="undefined") {
+		 //              localStorage.id_campanha  = $(this).attr("idcampanha");   
+		 //              localStorage.img_campanha = $(this).children().attr("src");
+		 //        }
+		 //        // Change page
+		 //        $.mobile.changePage("#prod-camp-page");
+		    // });			
     	});
         </script>        
     </body>
