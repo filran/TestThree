@@ -4,9 +4,8 @@ function lista_campanhas(){
 
 	$.getJSON( URL_SOA_LISTA_CAMPANHAS , {format:"json"} )
 		.fail(function( jqxhr, textStatus, error ) {
-			loading_off();
-
- 
+			// loading_off();
+			alert( msg_erro_padrao_soa() );
 		})
 		.done(function(data){
 			loading_off();
@@ -145,10 +144,11 @@ function lista_produto(id_produto)
 			else
 			{
 				$.each(data,function(k,v){
-					for( i=1 ; i<=v.imgs.length ; i++ )
-					{
-						$(".swiper-wrapper").append('<div class="swiper-slide"><img src="'+v.imgs[i]+'"></div>');
-					}
+
+					$.each( v.imgs , function(kk,img){
+						$("#owl-demo").append('<div class="item"><img src="'+img+'" alt="Owl Image"></div>');
+					});
+
 					$("#nome-prod").html(v.marca+" - "+v.produto);
 					$("#preco").html(v.preco);
 					$("#parcelamento").html(" até "+v.parcelamento);
